@@ -116,10 +116,16 @@ posts.forEach((singlePost) => {
 // Milestone 2
 // prendere il bottone 'Mi piace' e metterlo in ascolto
 const likeBtn = document.querySelectorAll('.js-like-button');
-console.log(likeBtn)
 // prendere il contatore dei like
 const counterLike = document.querySelectorAll('.js-likes-counter');
-console.log(counterLike)
 // attaccarlo al contatore dei like
-// ogni volta che clicchiamo su 'Mi piace' si incrementa il contatore dei like
+likeBtn.forEach((likeDOM, index) => {
+    likeDOM.addEventListener('click', function() {
+        // ogni volta che clicchiamo su 'Mi piace' cambia il colore in verde e
+        // si incrementa il contatore dei like
+        counterLike[index].textContent = parseInt(counterLike[index].textContent) + 1;
+        likeDOM.classList.add('like-button--liked');
+    });
+});
+
 
