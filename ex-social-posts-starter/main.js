@@ -119,6 +119,7 @@ const likeBtn = document.querySelectorAll('.js-like-button');
 // prendere il contatore dei like
 const counterLike = document.querySelectorAll('.js-likes-counter');
 // attaccarlo al contatore dei like
+
 likeBtn.forEach((likeDOM, index) => {
     likeDOM.addEventListener('click', function() {
         // ogni volta che clicchiamo su 'Mi piace' cambia il colore in verde e
@@ -126,6 +127,8 @@ likeBtn.forEach((likeDOM, index) => {
         counterLike[index].textContent = parseInt(counterLike[index].textContent) + 1;
         likeDOM.classList.add('like-button--liked');
     });
+    
 });
+
 
 
